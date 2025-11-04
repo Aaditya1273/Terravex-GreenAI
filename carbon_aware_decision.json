@@ -1,0 +1,72 @@
+{
+  "carbon_aware_scheduling": {
+    "description": "Smart scheduling based on grid carbon intensity and renewable energy availability",
+    "regions": {
+      "EU": {
+        "low_carbon_hours": ["10:00-16:00"],
+        "peak_solar": ["12:00-14:00"],
+        "peak_wind": ["02:00-06:00", "20:00-23:00"],
+        "grid_intensity_kwh": 0.475,
+        "renewable_percentage": 42
+      },
+      "US_WEST": {
+        "low_carbon_hours": ["11:00-17:00"],
+        "peak_solar": ["13:00-15:00"],
+        "peak_wind": ["03:00-07:00", "19:00-22:00"],
+        "grid_intensity_kwh": 0.428,
+        "renewable_percentage": 38
+      },
+      "INDIA": {
+        "low_carbon_hours": ["11:00-16:00"],
+        "peak_solar": ["12:00-14:00"],
+        "peak_wind": ["21:00-05:00"],
+        "grid_intensity_kwh": 0.82,
+        "renewable_percentage": 25
+      }
+    },
+    "scheduling_rules": {
+      "training_jobs": {
+        "priority": "high",
+        "defer_hours": 6,
+        "carbon_threshold": 0.5,
+        "action": "schedule_during_low_carbon_hours"
+      },
+      "inference_jobs": {
+        "priority": "medium",
+        "defer_hours": 2,
+        "carbon_threshold": 0.6,
+        "action": "use_cached_results_if_available"
+      },
+      "batch_processing": {
+        "priority": "low",
+        "defer_hours": 12,
+        "carbon_threshold": 0.4,
+        "action": "queue_for_renewable_peak"
+      }
+    },
+    "optimization_strategies": {
+      "model_selection": {
+        "high_carbon_periods": "use_quantized_models",
+        "low_carbon_periods": "allow_full_precision",
+        "emergency_mode": "use_cached_predictions"
+      },
+      "compute_allocation": {
+        "renewable_available": "scale_up_training",
+        "grid_dependent": "scale_down_or_defer",
+        "battery_backup": "continue_critical_only"
+      }
+    },
+    "impact_metrics": {
+      "carbon_avoided_kg_per_day": 2.5,
+      "energy_shifted_kwh_per_day": 5.2,
+      "renewable_utilization_increase": "15%",
+      "cost_savings_per_month": "$45"
+    }
+  },
+  "real_time_decisions": {
+    "current_grid_status": "check_electricitymaps_api",
+    "decision_threshold": 0.5,
+    "fallback_strategy": "use_most_efficient_model",
+    "monitoring_interval_minutes": 15
+  }
+}

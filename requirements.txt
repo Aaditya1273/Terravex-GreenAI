@@ -1,0 +1,31 @@
+# Green AI Requirements
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
+codecarbon>=2.3.0
+matplotlib>=3.7.0
+pandas>=1.5.0
+numpy>=1.24.0
+pillow>=9.5.0
+scikit-learn>=1.1.0
+openvino>=2023.0.0
+datasets>=2.12.0
+accelerate>=0.20.0
+
+# Dashboard and Visualization
+gradio>=4.0.0
+plotly>=5.15.0
+dash>=2.14.0
+
+# Performance and Monitoring
+psutil>=5.9.0
+memory-profiler>=0.60.0
+
+# Development and Testing
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Additional ML Tools
+onnx>=1.14.0
+onnxruntime>=1.15.0

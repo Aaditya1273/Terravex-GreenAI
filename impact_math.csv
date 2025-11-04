@@ -1,0 +1,15 @@
+scenario,co2_saved_tonnes_per_year,people_impacted,sector,description,water_saved_m3_per_year,accuracy_improvement,energy_drop_percent,farmers_benefited
+low,10,1000,Agriculture,Small-scale crop disease detection reducing pesticide use,500,2.5,40,250
+medium,50,10000,Wildfire Detection,Regional fire monitoring system with early detection,0,5.0,35,0
+high,200,50000,Air Quality Monitoring,City-wide pollution prediction and alert system,0,3.2,45,0
+agriculture_precision,25,5000,Agriculture,Precision farming with satellite imagery analysis,1250,4.1,42,1200
+forest_monitoring,75,25000,Environmental,Deforestation tracking and carbon sequestration,0,6.8,38,0
+energy_grid,150,100000,Energy,Smart grid optimization with renewable energy forecasting,0,2.8,50,0
+water_management,30,15000,Water,Efficient irrigation systems with ML-driven predictions,7500,3.5,40,3500
+urban_planning,100,75000,Urban,Smart city traffic and energy optimization,0,4.2,35,0
+disaster_response,80,40000,Emergency,Natural disaster prediction and response coordination,0,7.1,30,0
+carbon_tracking,120,60000,Climate,Corporate carbon footprint monitoring and reduction,0,3.8,45,0
+indian_farmer_crop,35,8000,Agriculture,Crop recommendation system for Indian smallholder farmers,2000,5.2,40,2000
+air_quality_delhi,85,12000000,Air Quality,Delhi air pollution prediction and health alerts,0,4.5,42,0
+precision_irrigation,45,15000,Water,Smart irrigation for water-scarce regions,12000,6.1,38,4500
+depin_agriculture,60,25000,DePIN,Decentralized agricultural monitoring network,3500,4.8,41,6000

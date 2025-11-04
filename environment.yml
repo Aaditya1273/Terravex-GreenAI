@@ -1,0 +1,28 @@
+name: terravex
+channels:
+  - intel
+  - pytorch
+  - huggingface
+  - defaults
+dependencies:
+  - ipython=8.9.0
+  - openpyxl=3.0.10
+  - pandas=1.5.1
+  - pip=22.2.2
+  - python=3.10.8
+  - requests=2.28.1
+  - scikit-learn=1.1.1
+  - scikit-learn-intelex=2023.0.1
+  - setuptools=63.4.1
+  - tqdm=4.64.0
+  - pytorch=2.0.1
+  - torchvision=0.15.2
+  - matplotlib=3.7.1
+  - pillow=9.5.0
+  - numpy=1.24.3
+  - pip:
+    - codecarbon==2.3.4
+    - transformers==4.30.2
+    - datasets==2.12.0
+    - accelerate==0.20.3
+    - openvino==2023.0.1
